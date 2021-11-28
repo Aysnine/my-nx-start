@@ -1,8 +1,7 @@
 import styles from './app.module.scss';
 
-import { ReactComponent as Logo } from './logo.svg';
-
 import { Route, Link } from 'react-router-dom';
+import { MyReactUi, Greeting } from '@my-nx-start/my-react-ui';
 
 export function App() {
   return (
@@ -11,7 +10,7 @@ export function App() {
         <h1>Welcome to my-react-app!</h1>
       </header>
       <main>
-        <h2>Resources &amp; Tools</h2>
+        <MyReactUi />
       </main>
         <div role="navigation">
         <ul>
@@ -30,6 +29,7 @@ export function App() {
           <div>
             This is the generated root route.{' '}
             <Link to="/page-2">Click here for page 2.</Link>
+            <Greeting />
           </div>
         )}
       />

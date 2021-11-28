@@ -6,7 +6,7 @@ export interface GreetingProps {}
 export function Greeting(props: GreetingProps) {
   return (
     <div>
-      <h1>Welcome to Greeting!</h1>
+      <h3>Welcome to Greeting!</h3>
     </div>
   );
 }

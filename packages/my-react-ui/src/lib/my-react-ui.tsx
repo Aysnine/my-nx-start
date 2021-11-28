@@ -6,7 +6,7 @@ export interface MyReactUiProps {}
 export function MyReactUi(props: MyReactUiProps) {
   return (
     <div>
-      <h1>Welcome to MyReactUi!</h1>
+      <h2>Welcome to MyReactUi!</h2>
     </div>
   );
 }
