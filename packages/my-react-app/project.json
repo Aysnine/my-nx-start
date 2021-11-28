@@ -1,0 +1,72 @@
+{
+  "root": "packages/my-react-app",
+  "sourceRoot": "packages/my-react-app/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/my-react-app",
+        "index": "packages/my-react-app/src/index.html",
+        "baseHref": "/",
+        "main": "packages/my-react-app/src/main.tsx",
+        "polyfills": "packages/my-react-app/src/polyfills.ts",
+        "tsConfig": "packages/my-react-app/tsconfig.app.json",
+        "assets": [
+          "packages/my-react-app/src/favicon.ico",
+          "packages/my-react-app/src/assets"
+        ],
+        "styles": ["packages/my-react-app/src/styles.scss"],
+        "scripts": [],
+        "webpackConfig": "@nrwl/react/plugins/webpack"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "packages/my-react-app/src/environments/environment.ts",
+              "with": "packages/my-react-app/src/environments/environment.prod.ts"
+            }
+          ],
+          "optimization": true,
+          "outputHashing": "all",
+          "sourceMap": false,
+          "namedChunks": false,
+          "extractLicenses": true,
+          "vendorChunk": false
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/web:dev-server",
+      "options": {
+        "buildTarget": "my-react-app:build",
+        "hmr": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "my-react-app:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/my-react-app/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/my-react-app"],
+      "options": {
+        "jestConfig": "packages/my-react-app/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

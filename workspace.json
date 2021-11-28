@@ -1,4 +1,7 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "my-react-app": "packages/my-react-app",
+    "my-react-app-e2e": "packages/my-react-app-e2e"
+  }
 }
