@@ -1,0 +1,23 @@
+{
+  "root": "packages/my-react-ui",
+  "sourceRoot": "packages/my-react-ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/my-react-ui/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/packages/my-react-ui"],
+      "options": {
+        "jestConfig": "packages/my-react-ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

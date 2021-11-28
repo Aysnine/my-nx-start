@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "my-react-app": "packages/my-react-app",
-    "my-react-app-e2e": "packages/my-react-app-e2e"
+    "my-react-app-e2e": "packages/my-react-app-e2e",
+    "my-react-ui": "packages/my-react-ui"
   }
 }
